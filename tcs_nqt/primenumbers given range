@@ -1,0 +1,18 @@
+def primeornot(n):
+    if n<=1:
+        return False
+    flag=True
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
+            flag=False
+            return flag
+            break
+    return flag
+minn=int(input())
+maxx=int(input())
+for i in range(minn,maxx):
+    if primeornot(i):
+        print(i)
+    else:
+        continue
+    
