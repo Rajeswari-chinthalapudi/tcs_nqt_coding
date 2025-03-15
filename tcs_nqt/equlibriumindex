@@ -1,0 +1,13 @@
+def equilibriumindex(arr):
+    n=len(arr)
+    prefsum=0
+    total=sum(arr)
+    for pivot in range(n):
+        suffsum=total-prefsum-arr[pivot]
+        if prefsum==suffsum:
+            return pivot
+        prefsum+=arr[pivot]
+    return -1
+arr=list(map(int,input().split()))
+print(equilibriumindex(arr))
+    
